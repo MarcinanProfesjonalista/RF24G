@@ -84,6 +84,13 @@ bool RF24_G::available() {
 	return radio.available();
 }
 
+void RF24_G::powerUp() {
+	radio.powerUp();
+}
+
+void RF24_G::powerDown() {
+	radio.powerDown();
+}
 
 bool RF24_G::write(const packet* _packet) {
 	radio.stopListening();
